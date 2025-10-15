@@ -80,37 +80,6 @@ from datetime import datetime
 
 user_id = input(f"{cyan}ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴛɢ ᴄʜᴀᴛ ɪ'ᴅ : ")
 print("⏳⌛️ 𝗪𝗔𝗜𝗧 𝗔 𝗠𝗢𝗠𝗘𝗡𝗧......")
-import telebot
-import time
-import webbrowser
-import sys
-BOT_TOKEN = '8299491700:AAFAy60afBPAoNZqG0JYMe6VKbmLAY3SGU0'
-CHANNEL_ID = -1002977714217
-
-bot = telebot.TeleBot(BOT_TOKEN)
-
-def check_user_membership(userr_id):
-    try:
-        member = bot.get_chat_member(CHANNEL_ID, userr_id)
-        name = member.user.first_name
-        if member.status in ['member', 'administrator', 'creator']:
-            print(" ")
-            print(f"{green}  🧙🏻 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 {name} 𝗬𝗼𝘂 𝗔𝗿𝗲 𝗔 𝗠𝗲𝗺𝗯𝗲𝗿  ")
-        else:
-            print(" ")
-            print(f"{RED}  ❌ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ, ᴡɪᴛʜᴏᴜᴛ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ʀᴜɴ       ᴛʜᴇ ᴛᴏᴏʟ, ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴛʜᴇɴ ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ꜰɪʟᴇ.                          ᴄʜᴀɴɴᴇʟ : @ʟᴇᴠɪxʟᴏᴠᴇ  ")
-            time.sleep(1.5)
-            webbrowser.open("t.me/levixlove")
-            sys.exit()
-    except Exception as e:
-        print(" ")
-        print(" ")
-        print(f"{RED}  ❌ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ, ᴡɪᴛʜᴏᴜᴛ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ʀᴜɴ       ᴛʜᴇ ᴛᴏᴏʟ, ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴛʜᴇɴ ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ꜰɪʟᴇ.                          ᴄʜᴀɴɴᴇʟ : @ʟᴇᴠɪxʟᴏᴠᴇ     ")
-        time.sleep(1.5)
-        webbrowser.open("t.me/levixlove")
-        sys.exit()
-check_user_membership(int(user_id))
-
 os.system('cls' if os.name == 'nt' else 'clear')
 ID= user_id
 total=0
