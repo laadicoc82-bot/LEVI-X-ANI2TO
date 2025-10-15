@@ -23,7 +23,7 @@ BOLD = '\033[1m'
 
 # Basic colors
 RED = '\033[91m'
-BOLD_GREEN = '\033[92m'
+GREEN = '\033[92m'
 YELLOW = '\033[93m'
 BLUE = '\033[94m'
 CYAN = '\033[96m'
@@ -46,14 +46,15 @@ blue = "\033[1m\033[34m"
 ORANGE = '\x1b[38;5;208m'  # Custom orange
 WHITE = '\x1b[1;37m'  # White
 
-COLOR_COMBOS=[['green','yellow'],['blue','cyan'],['yellow','white']]
+COLOR_COMBOS=[['blue','cyan'],['blue','cyan']]
 stein_colors,qe_colors=random.sample(COLOR_COMBOS,2)
-LEO=render(' LEVI X       ANI2TO',colors=stein_colors,align='center',font='block',background='black')
-QE=render ('Telegram: @Beasteren,@Sudeephu | Join @Levixlove,@Aniredirect\nV5.0 ',colors=qe_colors,align='right',font='console',background='black')
+LEO=render(' LEVI X    ANI2TO',colors=stein_colors,align='center',font='block',background='black')
+QE=render('Telegram: @Beasteren,@Sudeephu | Join @Levixlove,@Aniredirect\nV5.0 ',colors=qe_colors,align='right',font='console',background='black')
 print(LEO)
-print(f'{yellow}∘₊✧───────────────────────────────────────✧₊∘                                        ')
+CYAN='\x1b[96m'
+print(f'{CYAN}∘₊✧───────────────────────────────────────✧₊∘                                        ')
 print(QE)
-print(f'{yellow}∘₊✧───────────────────────────────────────✧₊∘                                        ')
+print(f'{CYAN}∘₊✧───────────────────────────────────────✧₊∘                                        ')
 time.sleep(1)
 c1='\x1b[38;5;120m'
 j21='\x1b[38;5;204m'
@@ -62,9 +63,6 @@ cyan='\x1b[1m\x1b[36m'
 x='\x1b[1;33m'
 white='\x1b[1;37m'
 z='\x1b[1;31m'
-Y = "\033[1;33m"
-C = "\033[1;36m"
-M = "\033[1;35m"
 bi=random.randint(5,208)
 steincc=f"[38;5;{bi}m"
 meerssmo=random.randint(100,300)
@@ -73,14 +71,14 @@ import base64
 import uuid
 import platform
 import hashlib
-Token=input(f"{yellow} ᴇɴᴛᴇʀ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ : ")
+Token=input(f"{cyan}ᴇɴᴛᴇʀ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ : ")
 import base64
 import pytz
 import requests
 import sys
 from datetime import datetime
 
-user_id = input(f"{yellow}ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴛɢ ᴄʜᴀᴛ ɪ'ᴅ : ")
+user_id = input(f"{cyan}ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴛɢ ᴄʜᴀᴛ ɪ'ᴅ : ")
 print("⏳⌛️ 𝗪𝗔𝗜𝗧 𝗔 𝗠𝗢𝗠𝗘𝗡𝗧......")
 import telebot
 import time
@@ -214,9 +212,9 @@ def InfoAcc(username,gg):
 def pppp():
     os.system('cls' if os.name=='nt' else 'clear')
     print(""*54)
-    print(f"{green}  UNC: [{hits}]    {red}BAD: [{bad_gm}]    {yellow}BAD EMAIL: {bad_mail} ")
+    print(f"{cyan} UNC: [{hits}]  ~  BAD: [{bad_gm}]  ~  BAD EMAIL: {bad_mail} ")
     print(""*54)
-    print(f"{white}:: LEVI X ANI2TO ::".center(54))
+    print(":: LEVI X ANI2TO ::".center(54))
 import requests
 import json
 import random
@@ -227,9 +225,9 @@ def safe_int_input(prompt,default):
 	try:value=input(prompt).strip();return int(value)if value else default
 	except:return default
 ranges={1:(1279001,17750000),2:(17750000,279760000),3:(279760000,900990000),4:(900990000,1629010000),5:(1629010000,2500000000),6:(2500000000,3713668786),7:(3713668786,5699785217),8:(5699785217,8507940634),9:(8507940634,21254029834)}
-print(f"{yellow}\nSelect a year for user ID range⚚ ")
+print(f'{cyan}\nSelect a year for user ID range:')
 for k in range(1,10):print(f"{k} - {2010+k}")
-year_choice=safe_int_input(f"{yellow}ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ʏᴇᴀʀ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʜᴜɴᴛ (1-9) ☞ ",5)
+year_choice=safe_int_input('ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ʏᴇᴀʀ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʜᴜɴᴛ (1-9) : ',5)
 def generate_user_id():start,end=ranges.get(year_choice,ranges[5]);return str(random.randrange(start,end))
 def gg(min_followers,min_posts,user_id_func):
 	while True:
@@ -237,6 +235,6 @@ def gg(min_followers,min_posts,user_id_func):
 			user_id=user_id_func();model_number=str(random.randint(150,999));android_version=random.choice(['23/6.0','24/7.0','25/7.1.1','26/8.0','27/8.1','28/9.0']);dpi=str(random.randint(100,1300));resolution=f"{random.randint(200,2000)}x{random.randint(200,2000)}";brand=random.choice(['SAMSUNG','HUAWEI','LGE/lge','HTC','ASUS','ZTE','ONEPLUS','XIAOMI','OPPO','VIVO','SONY','REALME']);build_suffix=str(random.randint(111,999));user_agent=f"Instagram 311.0.0.32.118 Android ({android_version}; {dpi}dpi; {resolution}; {brand}; SM-T{model_number}; SM-T{model_number}; qcom; en_US; 545986{build_suffix})";lsd_token=''.join(random.choices(string.ascii_letters+string.digits,k=32));headers={'accept':'*/*','accept-language':'en,en-US;q=0.9','content-type':'application/x-www-form-urlencoded','dnt':'1','origin':'https://www.instagram.com','priority':'u=1, i','referer':'https://www.instagram.com/cristiano/following/','user-agent':user_agent,'x-fb-friendly-name':'PolarisUserHoverCardContentV2Query','x-fb-lsd':lsd_token};data={'lsd':lsd_token,'fb_api_caller_class':'RelayModern','fb_api_req_friendly_name':'PolarisUserHoverCardContentV2Query','variables':json.dumps({'userID':user_id,'username':'cristiano'}),'server_timestamps':'true','doc_id':'7717269488336001'};response=requests.post('https://www.instagram.com/api/graphql',headers=headers,data=data);user_info=response.json().get('data',{}).get('user',{});username=user_info.get('username','');infoinsta[username]=user_info;follower_count=int(user_info.get('follower_count',0));media_count=int(user_info.get('media_count',0))
 			if username and'_'not in username and follower_count>=min_followers and media_count>=min_posts:email=f"{username}@gmail.com";check(email)
 		except:pass
-minimum_followers=safe_int_input(f"{yellow}ᴇɴᴛᴇʀ ᴍɪɴɪᴍᴜᴍ ꜰᴏʟʟᴏᴡᴇʀꜱ ☞ ",0)
-minimum_posts=safe_int_input(f"{yellow}ᴇɴᴛᴇʀ ᴍɪɴɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏꜰ ᴘᴏꜱᴛ ☞ ",0)
-for _ in range(150):Thread(target=gg,args=(minimum_followers,minimum_posts,generate_user_id)).start()
+minimum_followers=safe_int_input('ᴇɴᴛᴇʀ ᴍɪɴɪᴍᴜᴍ ꜰᴏʟʟᴏᴡᴇʀꜱ : ',0)
+minimum_posts=safe_int_input('ᴇɴᴛᴇʀ ᴍɪɴɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏꜰ ᴘᴏꜱᴛ : ',0)
+for _ in range(120):Thread(target=gg,args=(minimum_followers,minimum_posts,generate_user_id)).start()
